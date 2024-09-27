@@ -1,0 +1,1 @@
+This repository manages and maintains program source files and hands-on materials used in open-source programming classes in 2024.
