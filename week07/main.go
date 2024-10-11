@@ -1,12 +1,15 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
+	"os"
 )
 
 func main() {
-	letter := "공부 ?이팅!"
-	fixletter := strings.NewReplacer("?", "파")
-	fmt.Println(fixletter.Replace(letter))
+	in := bufio.NewReader(os.Stdin)
+	fmt.Print("Input your name : ")
+	name, err := in.ReadString('\n')
+	fmt.Println(name)
+	fmt.Println(err)
 }
