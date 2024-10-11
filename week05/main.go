@@ -16,7 +16,7 @@ func main() {
 	//float32=float  float64==c언어의 double, GO언어의 경우 필요 없는 변수가 있으면 에러가 남.
 
 	//f := 4.30 //float64
-	i := 55 //단축 연산자 (넘어오는 값을 추론해 실수면 float 등, 자동으로)'
+	i := 55 //단축 연산자 (넘어오는 값을 추론해 실수면 float 등, 자동으로)' 추측 가능해야 함. 오른쪽이 숫자니까 float겠구나 등
 
 	fmt.Println(reflect.TypeOf(f), reflect.TypeOf(i))
 	fmt.Printf("%s\n", strings.Title("Jung inha")) //타이틀은 대문자로
