@@ -18,14 +18,14 @@ func main() {
 	}
 
 	i = strings.TrimSpace(i)                  // python strip과 유사
-	score, err := strconv.ParseInt(i, 16, 32) // 문자열 변수 i 값을 정수형(32비트)으로 변환, 입력 받은 값은 16진수로 처리.
+	score, err := strconv.ParseInt(i, 10, 32) // 문자열 변수 i 값을 정수형(32비트)으로 변환, 입력 받은 값은 16진수로 처리.
+	var aOrNot string
+	if score >= 90 {
+		aOrNot = "A"
 
-	if score >= 60 {
-		fmt.Println("A")
-		fmt.Printf("%d\n", score)
 	} else {
-		fmt.Println("BCDF")
-		fmt.Printf("%d\n", score)
-	}
+		aOrNot = "BCDF"
 
+	}
+	fmt.Printf("%d점은 %s등급입니다\n", score, aOrNot)
 }
