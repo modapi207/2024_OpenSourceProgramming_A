@@ -1,4 +1,4 @@
-package main
+package 
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings" //패키지 (비슷 =stdio.h)
 ) //필요한 모듈 자동 추가, 필요 없으면 자동 삭제
-func main() {
+//func main() {
 	//var i int = 55                   // 타입이 뒤에 표시, 세미클론 X
 
 	// var i int
