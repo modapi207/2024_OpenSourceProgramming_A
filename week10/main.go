@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -20,20 +21,21 @@ func main() {
 	i = strings.TrimSpace(i)
 
 	n, err := strconv.Atoi(i)
-	var isPrime bool = true //가독성, 저장공간크기 개선
+	var isPrime bool = true
 
 	if n < 2 { //1보다 큰 자연수(**) 중 1과 자기 자신만을 약수로 가지는 수
 		isPrime = false
 	} else {
-		for j := 2; j < n; j++ { // 2부터 입력된 수 앞까지 반복
-			if n%j == 0 { // 약수면
+		for j := 2; j <= int(math.Sqrt(float64(n))); j++ { //
+			if n%j == 0 {
 				isPrime = false
-				//count++ //count=count+1 , 더하기 연산 제거
+				break //무의미한 반복 제거
 			}
+			fmt.Printf("%d ", j) //반복문 횟수 확인용 코드
 		}
 	}
-	//if counts==0 //나누어 떨어지는 수가 있으면 안 됨
-	if isPrime { //비교연산 제거
+
+	if isPrime {
 		fmt.Printf("%d는(은) 소수입니다", n)
 	} else {
 		fmt.Printf("%d는(은) 소수가 아닙니다", n)
