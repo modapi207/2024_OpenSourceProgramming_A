@@ -13,8 +13,12 @@ func main() {
 	//fmt.Println(dates[0], dates[1], dates[2])
 	//fmt.Println(dates) //배열 그 자체를 짝음
 	//fmt.Printf("%#v\n", dates) //어레이 리터럴 찍어봄.
+	/*
+		for i := 0; i < len(dates); i++ {
+			fmt.Println(i, dates[i])
+		} */
 
-	for i := 0; i < len(dates); i++ {
-		fmt.Println(i, dates[i])
+	for i, v := range dates {
+		fmt.Println(i, v)
 	}
 }
